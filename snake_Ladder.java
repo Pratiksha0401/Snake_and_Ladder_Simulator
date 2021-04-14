@@ -1,12 +1,31 @@
 class snake_Ladder 
 {
+	public static final int No_Play=0;
+	public static final int Ladder=1;
+	public static final int Snake=2;
+
 	public static void main(String[] args) 
 	{
 		int first_Player_position=0;
-		System.out.println("First Player at start position " + first_Player_position);
+		System.out.println("Player at start position " + first_Player_position);
 		//rolls the die
 		int first_Player_roll=(int)Math.floor(Math.random()*6)+1;
-		first_Player_position=first_Player_roll+first_Player_position;
-		System.out.println("After rolls the die, first Player at position " + first_Player_position);
+
+		//check for no play,Ladder or snake_Ladder_UC3
+		int check_Play=(int)Math.floor(Math.random()*3);
+		switch(check_Play)
+		{
+			case No_Play:
+			break;
+			case Ladder:
+				first_Player_position+=first_Player_roll;
+				break;
+			case Snake:
+				first_Player_position-=first_Player_roll;
+				if(first_Player_position<0)
+					first_Player_position=0;
+				break;
+		}
+		System.out.println("Player  at position " + first_Player_position);
 	}
 }
