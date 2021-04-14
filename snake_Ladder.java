@@ -24,8 +24,9 @@ class snake_Ladder
 				break;
 				case Ladder:
 					first_Player_position+=first_Player_roll;
+					//ensure the player get exact 100 for winning
 					if(first_Player_position>100)
-						first_Player_position=100;
+						first_Player_position-=first_Player_roll;
 					break;
 				case Snake:
 					first_Player_position-=first_Player_roll;
