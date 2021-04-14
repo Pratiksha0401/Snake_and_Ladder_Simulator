@@ -8,12 +8,14 @@ class snake_Ladder
 	{
 		int first_Player_position=0;
 		System.out.println("Player at start position " + first_Player_position);
-		//rolls the die
-		int first_Player_roll=(int)Math.floor(Math.random()*6)+1;
+		
 		
 		//repeat till get wiiner
 		while(first_Player_position<100)
 		{
+			//rolls the die
+			int first_Player_roll=(int)Math.floor(Math.random()*6)+1;
+
 			//check for no play,Ladder or snake_Ladder_UC3
 			int check_Play=(int)Math.floor(Math.random()*10)%3;
 			switch(check_Play)
