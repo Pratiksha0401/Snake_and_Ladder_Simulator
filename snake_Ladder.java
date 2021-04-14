@@ -10,22 +10,28 @@ class snake_Ladder
 		System.out.println("Player at start position " + first_Player_position);
 		//rolls the die
 		int first_Player_roll=(int)Math.floor(Math.random()*6)+1;
-
-		//check for no play,Ladder or snake_Ladder_UC3
-		int check_Play=(int)Math.floor(Math.random()*3);
-		switch(check_Play)
+		
+		//repeat till get wiiner
+		while(first_Player_position<100)
 		{
-			case No_Play:
-			break;
-			case Ladder:
-				first_Player_position+=first_Player_roll;
+			//check for no play,Ladder or snake_Ladder_UC3
+			int check_Play=(int)Math.floor(Math.random()*10)%3;
+			switch(check_Play)
+			{
+				case No_Play:
 				break;
-			case Snake:
-				first_Player_position-=first_Player_roll;
-				if(first_Player_position<0)
-					first_Player_position=0;
-				break;
+				case Ladder:
+					first_Player_position+=first_Player_roll;
+					if(first_Player_position>100)
+						first_Player_position=100;
+					break;
+				case Snake:
+					first_Player_position-=first_Player_roll;
+					if(first_Player_position<0)
+						first_Player_position=0;
+					break;
+			}
 		}
-		System.out.println("Player  at position " + first_Player_position);
+		System.out.println("Player at position " + first_Player_position + " and also winner");
 	}
 }
