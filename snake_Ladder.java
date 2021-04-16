@@ -47,10 +47,7 @@ class snake_Ladder
 						Player_position+=Player_roll;
 						//ensure the player get exact 100 for winning
 						if(Player_position>100)
-						{
 							Player_position-=Player_roll;
-							break;
-						}
 						System.out.println(" Player "+player_Number+" gets ladder and now at "+ Player_position);
 						player(player_Number,Player_position);
 						break;
