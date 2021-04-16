@@ -12,14 +12,14 @@ class snake_Ladder
 		//repeat till get winner
 		while(first_Player_position<100 &&  second_Player_position<100)
 		{
-      //first player playing
-      first_Player_position=player(1,first_Player_position);
+      			//first player playing
+      			first_Player_position=player(1,first_Player_position);
      
-      //second player playing
-      second_Player_position=player(2,second_Player_position);
-    }
+      			//second player playing
+      			second_Player_position=player(2,second_Player_position);
+    		}
 
-    //to get winner
+    		//to get winner
 		if(first_Player_position==100)
 			System.out.println("First Player is Winner");
 		else
