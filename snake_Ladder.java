@@ -18,12 +18,15 @@ class snake_Ladder
      			 //second player playing
      			 second_Player_position=player(2,second_Player_position);
    		 }
+      			//second player playing
+      			second_Player_position=player(2,second_Player_position);
+    		}
 
     		//to get winner
-		if(first_Player_position==100)
-			System.out.println("First Player is Winner");
-		else
-			System.out.println("Second Player is Winner");
+		  if(first_Player_position==100)
+			  System.out.println("First Player is Winner");
+		  else
+			  System.out.println("Second Player is Winner");
 
 	}
    static int player(int player_Number,int Player_position)
